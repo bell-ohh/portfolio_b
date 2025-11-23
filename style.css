@@ -168,10 +168,15 @@ header {
 .navigation .navbar {
     list-style: none;
     display: flex;
-    gap: 60px;
+    gap: 30px;
     font-size: 1rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+      background-clip: text;
+    border-image: linear-gradient(to right, var(--primary1) 0%, var(--primary2) 100%) 1;
+    border-width: 2px;
+    border-style: solid;
+
 }
 
 
@@ -179,7 +184,7 @@ header {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 100;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 
@@ -202,10 +207,10 @@ header {
 }
 
 .container .left-side::before {
-    content: 'web & graphics';
+    content: 'web development & graphics';
     position: absolute;
-    top: 29%;
-    left: 1050px;
+    top: 125%;
+    right: -1100px;
     color: #ffffff;
     opacity: 0.25;
     font-size: 7rem;
@@ -271,59 +276,6 @@ header {
 }
 
 
-.container .right-side {
-    position: relative;
-    z-index: 99;
-}
-
-
-
-
-.container .right-side img {
-    width: 550px;
-    height: 565px;
-    object-fit: cover;
-    filter: brightness(65%);
-    opacity: 1;
-
-}
-
-
-
-
-.container .right-side::before {
-    content: 'web';
-    position: absolute;
-    top: 10%;
-    right: -10%;
-    color: var(--text-color);
-    opacity: 0.2;
-    font-size: 7rem;
-    text-transform: uppercase;
-    font-weight: 700;
-
-
-
-}
-
-
-
-.container .right-side::after {
-    content: 'designer';
-    position: absolute;
-    top: 94%;
-    right: 60px;
-    color: transparent;
-    opacity: 0.2;
-    font-size: 10.5rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--text-color);
-    z-index: -1;
-
-}
 
 /* about section  */
 
@@ -944,4 +896,21 @@ width: 150px;
     border-style: solid;
     animation: borderAnimation 8s linear infinite;
     margin-top: 30px;
+}
+
+
+
+#scrollbttn{
+    width: 50px;
+    height: 50px;
+    display: none;
+    font-weight: bold;
+    font-size: 45px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    background: transparent;
+    color: var(--primary2);
 }
